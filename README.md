@@ -19,3 +19,7 @@
 `pip install pdfminer`
 
 
+#####Postman Collection
+https://www.getpostman.com/collections/b7d2b992f00e6b385d11
+
+
