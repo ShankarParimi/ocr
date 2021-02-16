@@ -1,0 +1,7 @@
+issuer: Government Of India Ministry Of Corporate Affaris
+keywords:
+  - Certificate of Incorporation
+fields:
+  pan_number: The Permanent Account Number \(PAN\) of the company is\s+([a-zA-Z0-9]+)
+  tan_number: The Tax Deduction and Collection Account Number \(TAN\) of the company is\s+([a-zA-Z0-9]+)
+  cin: The Corporate Identity Number of the company is\s+([a-zA-Z0-9]+)

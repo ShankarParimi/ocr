@@ -1,0 +1,7 @@
+issuer: Udyam Registration Certificate
+keywords:
+  - Udyam Registration Certificate
+fields:
+  udyam_registration_number: Udyam Registration Number :\s+([\S]+)
+  trade_name: Name of Enterprise\s+([\S]+[\S]+)
+  legal_name: Owner Name\s+([\S]+ [\S]+ [\S]+)

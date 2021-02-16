@@ -1,0 +1,11 @@
+issuer: Udyog Aadhaar Memorandum
+keywords:
+  - Udyog Aadhaar Memorandum
+fields:
+  pan_number: PAN Number\s+([a-zA-Z0-9]+)
+  signatory_name: Name of Entrepreneur\s+([a-zA-Z]+)
+  trade_name: Name of Enterprise\s+([a-zA-Z]+)
+tables:
+  - start: SN|\s+Flat/Door/Block No.\s+Name of Premises/Building Village\s+Road/Street/ Lane\s+Area/Locality\s+City\s+Pin\s+State\s+District
+    end: Official Address of Enterprise
+    body: (?P<sn>\d+)\s+(?P<door_no>[\S]+)\s+(?P<name_of_building>[\S]+)\s+(?P<road_name>[\S])

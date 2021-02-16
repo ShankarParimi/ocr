@@ -1,0 +1,7 @@
+issuer: GSTIN - Govt of India
+keywords:
+  - Form GST REG-06
+fields:
+  gstin: Registration Number :(\w+)
+  legal_name: Legal Name\s+([\S]+ [\S]+ [\S]+)
+  trade_name: Trade Name, if any\s+([\S]+ [\S]+)
