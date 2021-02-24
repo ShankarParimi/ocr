@@ -51,7 +51,9 @@ def uploadDocForOcr():
                 inputModule = 'tesseract5'
                 result = extract_data('documents/' + filename, templates=templates,
                                   input_module=input_mapping[inputModule])
-                return result
+                if result:
+                    return result
+                return ""
             else:
                 return ""
     else:

@@ -1,6 +1,6 @@
 issuer: Udyam Registration Certificate
 keywords:
-  - Udyam Registration Certificate
+  - UDYAM
 fields:
   udyam_registration_number: Udyam Registration Number :\s+([\S]+)
   trade_name: Name of Enterprise\s+([\S]+[\S]+)
