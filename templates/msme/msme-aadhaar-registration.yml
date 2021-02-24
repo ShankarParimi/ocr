@@ -3,7 +3,7 @@ keywords:
   - Udyog Aadhaar Registration Certificate
 fields:
   aadhaar_number: Udyog Aadhaar Number\s+([a-zA-Z0-9]+)
-  trade_name: Name of Enterprise\s+([a-zA-Z]+)
+  trade_name: Name of Enterprise\s+([\S]+ [\S]+ [\S]+)
 tables:
   - start: SN\s+Flat/Door/Block No.\s+Name of Premises/Building Village\s+Road/Street/ Lane\s+Area/Locality\s+City\s+Pin\s+State\s+District
     end: Official Address of Enterprise

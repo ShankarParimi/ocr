@@ -39,16 +39,23 @@ def uploadDocForOcr():
         fileType = filename.rsplit('.', 1)[1].lower()
 
         if fileType == 'pdf':
-            inputModule = 'pdfminer'
+            inputModule = 'pdftotext'
         if fileType == 'jpeg' or fileType == 'jpg' or fileType == 'png':
             inputModule = 'tesseract4'
 
         result = extract_data('documents/' + filename, templates=templates, input_module=input_mapping[inputModule])
         if result:
             return result
-        return ""
+        else:
+            if fileType == 'pdf':
+                inputModule = 'tesseract5'
+                result = extract_data('documents/' + filename, templates=templates,
+                                  input_module=input_mapping[inputModule])
+                return result
+            else:
+                return ""
     else:
-        resp = jsonify({'message': 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
+        resp = jsonify({'message': 'Allowed file types are pdf, png, jpg, jpeg'})
         resp.status_code = 400
         return resp
 

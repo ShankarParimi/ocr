@@ -7,7 +7,7 @@ import os
 from os.path import join
 import logging
 
-from .input import pdftotext
+from .input import pdftotext, tesseract5
 from .input import pdfminer_wrapper
 from .input import tesseract
 from .input import tesseract4
@@ -28,6 +28,7 @@ input_mapping = {
     "tesseract4": tesseract4,
     "pdfminer": pdfminer_wrapper,
     "gvision": gvision,
+    "tesseract5": tesseract5
 }
 
 output_mapping = {"csv": to_csv, "json": to_json, "xml": to_xml, "none": None}
