@@ -1,0 +1,7 @@
+issuer: Government of Maharashtra - Application for Intimation
+keywords:
+  - Form - 'F'
+  - APPLICATION FOR INTIMATION
+fields:
+  name_of_establishment: Name of the establishment\s*[/ आथापनेचे]+([\S ]+[\S]+)
+  name_of_employer: Name of the Employer\s*[/ मालकाचेनाव]+([\S ]+[\S]+)

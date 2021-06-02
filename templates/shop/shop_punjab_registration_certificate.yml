@@ -1,0 +1,8 @@
+issuer: Government of Punjab -  Registration certificate
+keywords:
+  - Form F
+  - REGISTRATION CERTIFICATE OF SHOPS & COMMERCIAL ESTABLISHMENTS
+  - COMMERCIAL ESTABLISHMENTS ACT, 1958
+fields:
+  name_of_establishment: Name of the Establishment\s*:*\s*([\S ]+[\S]+)
+  name_of_employer: Name and Father's/Husband's\s*([\S ]+[\S]+)\s*S/o

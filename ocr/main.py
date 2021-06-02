@@ -81,6 +81,7 @@ def extract_data(invoicefile, templates=None, input_module=pdftotext):
 
     # print(templates[0])
     extracted_str = input_module.to_text(invoicefile).decode("utf-8")
+    print("extracted_str:", extracted_str)
 
     logger.debug("START pdftotext result ===========================")
     logger.debug(extracted_str)
@@ -89,13 +90,25 @@ def extract_data(invoicefile, templates=None, input_module=pdftotext):
     logger.debug("Testing {} template files".format(len(templates)))
     for t in templates:
         optimized_str = t.prepare_input(extracted_str)
+        print("optimized_str:", extracted_str)
 
         if t.matches_input(optimized_str):
-            return t.extract(optimized_str)
+            identified_fields = t.extract(optimized_str)
+            print("identified_fields:", identified_fields)
+            if not is_all_fields_empty(identified_fields):
+                return identified_fields
 
     logger.error("No template for %s", invoicefile)
     return False
 
+
+# check if all other fields apart from issuer are empty
+def is_all_fields_empty(identified_fields):
+    for key, value in identified_fields.items():
+        if key != "issuer":
+            if value:
+                return False
+    return True
 
 def create_parser():
     """Returns argument parser """

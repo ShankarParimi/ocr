@@ -1,0 +1,9 @@
+issuer: Government of Rajasthan - Department of Labour
+keywords:
+  - Form - 3
+  - Government of Rajasthan
+  - Department of Labour
+  - Rajasthan Shops and Establishment Acts, 1958
+fields:
+  name_of_establishment: Name of Establishment\s*[:-]+\s*([\S ]+[\S]+)
+  name_of_employer: Name of Occupier/Employer\s*[:-]+\s*([\S ]+[\S]+)

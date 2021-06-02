@@ -1,0 +1,7 @@
+issuer: Government of karnataka -  FSS Act 2006
+keywords:
+  - FSS Act
+  - Government of Karnataka
+  - Registration under FSS Act,2006
+fields:
+  name_of_employer: Name and address of applicant\s*:?\s*([\S ]+[\S]+)

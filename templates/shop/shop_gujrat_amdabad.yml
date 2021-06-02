@@ -1,0 +1,7 @@
+issuer: Government of Gujrat -  Amdabad municipal Corporation
+keywords:
+  - AMDAVAD MUNICIAPL CORPORATION
+  - SHOPS AND ESTABLISHMENT
+fields:
+  name_of_establishment: Name of Establishment\s*:*\s*([\S ]+[\S]+)
+  name_of_employer: Name of Employer\s*:*\s*([\S ]+[\S]+)

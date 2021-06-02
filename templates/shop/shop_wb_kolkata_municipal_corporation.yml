@@ -1,0 +1,8 @@
+issuer: Government of West Bengal - Kolkata Municipal Corporation
+keywords:
+  - Kolkata Municipal Corporation
+  - e-Demand Notice for Renewal
+  - Certificate of Enlistment
+fields:
+  name_of_establishment: M/S\s*:\s*([\S ]+[\S]+)
+  name_of_employer: Name and Address of Proprietor/Partners/Director\(s\)/Karta/Manager\s*:\s*([\S ]+[\S]+)

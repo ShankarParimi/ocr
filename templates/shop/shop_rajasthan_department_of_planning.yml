@@ -1,0 +1,7 @@
+issuer: Government of Rajasthan - Department of Planning
+keywords:
+  - Department of Planning
+  - Directorate of Economics & Statistics
+  - Business Registration Number (BRN)
+fields:
+  name_of_establishment: Name of Firm / Establishment /\s*([\S ]+[\S]+)

@@ -1,0 +1,8 @@
+issuer: Government of West Bengal - Certificate of Enlistment
+keywords:
+  - The West Bengal Municipal Act
+  - CERTIFICATE OF ENLISTMENT
+  - Certificate of Enlistment
+fields:
+  name_of_establishment: grant\s*unto\s*([\s \S]+)Prop
+  name_of_employer: Prop.*Partner of?\s*([\s \S]+)residing

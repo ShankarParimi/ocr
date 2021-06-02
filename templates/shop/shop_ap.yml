@@ -1,0 +1,8 @@
+issuer: Government of Andhra Pradesh -  CERTIFICATE OF REGISTRATION OF ESTABLISHMENT
+keywords:
+  - FORM - C
+  - CERTIFICATE OF REGISTRATION OF ESTABLISHMENT
+  - LABOUR DEPARTMENT
+fields:
+  name_of_establishment: Name of the Establishment\s*:([\S ]+[\S]+)
+  name_of_employer: Employer Name\s*:([\S ]+[\S]+)
