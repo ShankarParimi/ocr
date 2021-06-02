@@ -1,0 +1,8 @@
+issuer: Government of haryana -  Registration certificate
+keywords:
+  - Form F
+  - Registration Certificate
+  - Under Rule 13 of the Punjab Shops and Establishment Act
+fields:
+  name_of_establishment: Name of Establishment\s*:*\s*([\S ]+[\S]+)
+  name_of_employer: Name and Parentage of Employer\s*:*\s*([\S ]+[\S]+)

@@ -1,0 +1,8 @@
+issuer: Government of Gujrat -  Godhra Nagarpalika
+keywords:
+  - Form-C
+  - GODHRA NAGARPALIKA
+  - Shops and Establishment Registration Certificate
+fields:
+  name_of_establishment: Establishment Name\s*:*\s*([\S ]+[\S]+)
+  name_of_employer: Employer Name\s*:*\s*([\S ]+[\S]+)
