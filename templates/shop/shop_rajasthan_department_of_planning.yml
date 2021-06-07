@@ -1,7 +1,6 @@
 issuer: Government of Rajasthan - Department of Planning
 keywords:
   - Department of Planning
-  - Directorate of Economics & Statistics
-  - Business Registration Number (BRN)
+  - Rajasthan, Jaipur
 fields:
-  name_of_establishment: Name of Firm / Establishment /\s*([\S ]+[\S]+)
+  name_of_establishment: \(BRN\)(?:[\S\s]*?)([A-Z .&-/]{6,})

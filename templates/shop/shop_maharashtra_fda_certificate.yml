@@ -1,7 +1,6 @@
 issuer: Government of Maharashtra - Food and Drug Administration
 keywords:
+  - Food And Drug Administration
   - Government of Maharashtra
-  - Food and Drug Administration
-  - Registration Certificate
 fields:
-  name_of_employer: नाव व पता\s*([\S ]+[\S]+)\s*Name & Address of Food Business Operator
+  name_of_employer: (?:अन्न व्यवसायाचा चालकाचे)? नाव व पता(?:[\S\s]*?)([A-Z .]{6,})

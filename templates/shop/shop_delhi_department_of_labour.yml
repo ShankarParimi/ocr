@@ -1,8 +1,7 @@
 issuer: Government of National Capital Territory of Delhi
 keywords:
   - Department of Labour
-  - Government of National Capital Territory of Delhi
-  - Registration Certificate of Establishment
+  - Government of National Capital
 fields:
   name_of_establishment: Name of the establishment\s*:\s*([\S ]+[\S]+)
-  name_of_employer: Name of the establishment\s*:\s*[\S ]+[\S]+\s*(?:Name of the Occupier/Employer)?\s*:?\s*([\S ]+[\S]+)
+  name_of_employer: Name of the establishment\s*:\s*[\S ]+[\S]+\s*(?:Name of the Occupier/Employer)?\s*:?\s*([A-z .]+)

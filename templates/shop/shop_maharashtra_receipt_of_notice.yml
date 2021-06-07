@@ -1,9 +1,7 @@
 issuer:  Government of Maharastra - Receipt of Notice
 keywords:
-  - महारा दुकाने व आ थापना
-  - महारा       दु क ाने व आ थापना
-  - सूचना िद याबाबत पावती
-  - सू च ना िद याबाबत पावती
+  - महाराष्ट्र दुकाने व आस्थापना
+  - सूचना दिल्याबाबत पावती
 fields:
-  name_of_establishment: आ थापनेचे नाव\s*:\s*[\S ]+[\S]+\s*([\S ]+[\S]+)
-  name_of_employer: मालकाचे नाव\s*:\s*[\S ]+[\S]+\s*([\S ]+[\S]+)
+  name_of_establishment: आस्थापनेचे नाव(?:[\S\s]*?)([A-Z .&-/]{6,})
+  name_of_employer: मालकाचे नाव(?:[\S\s]*?)([A-Z .&-]{6,})

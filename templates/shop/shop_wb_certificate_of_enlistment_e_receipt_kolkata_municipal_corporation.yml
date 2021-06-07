@@ -1,0 +1,7 @@
+issuer: Government of West Bengal - Kolkata Municipal Corporation - Certificate of Enlistment e-Receipt
+keywords:
+  - Kolkata Municipal Corporation
+  - Certificate of Enlistment e-Receipt
+fields:
+  name_of_establishment: M/S\s*:?\s*([\S ]+[\S]+)
+  name_of_employer: Name of CE Holder\s*:?\s*([\S ]+[\S]+)
