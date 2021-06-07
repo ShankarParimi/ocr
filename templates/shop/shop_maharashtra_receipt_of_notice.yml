@@ -5,3 +5,4 @@ keywords:
 fields:
   name_of_establishment: आस्थापनेचे नाव(?:[\S\s]*?)([A-Z .&-/]{6,})
   name_of_employer: मालकाचे नाव(?:[\S\s]*?)([A-Z .&-]{6,})
+
