@@ -1,0 +1,7 @@
+issuer: Government of West Bengal - Kolkata Municipal Corporation - e-Demand Notice for Renewal
+keywords:
+  - Kolkata Municipal Corporation
+  - e-Demand Notice for Renewal
+fields:
+  name_of_establishment: M/S\s*:\s*([\S ]+[\S]+)
+  name_of_employer: Name and Address of Proprietor/Partners(?:[\S\s]*?)([A-Z .]{6,})
