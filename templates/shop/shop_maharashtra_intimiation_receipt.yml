@@ -4,5 +4,5 @@ keywords:
   - Intimation receipt
   - Maharashtra Shops & Establishment
 fields:
-  name_of_establishment: Name of the Establishment\s*[:;>-]\s*([\S ]+[\S]+)
-  name_of_employer: Name of the Employer\s*[:;>-]\s*([\S ]+[\S]+)
+  name_of_establishment: Name of the Establishment\s*[:;>-]*\s*([\S ]+[\S]+)
+  name_of_employer: Name of the Employer\s*[:;>-]*\s*([\S ]+[\S]+)

@@ -1,7 +1,6 @@
 issuer: Government of Maharashtra - Registration Certificate
 keywords:
-  - Form - "B"
-  - Registration certificate
+  - Form — “B”
 fields:
-  name_of_establishment: Name of the Establishment\s*[.:;>]+([\S ]+[\S]+)
-  name_of_employer: Name of the Employer\s*[/ मालकाचेनाव]+([\S ]+[\S]+)
+  name_of_establishment: Name of the Establishment\s+([\S ]+[\S]+)
+  name_of_employer: मालकाचे नाव(?:[\S\s]*?)([A-Z \.]{8,})\s*
