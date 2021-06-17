@@ -1,0 +1,9 @@
+issuer: Government of Maharashtra - Intimation Certificate
+keywords:
+  - INTIMATION RECEIPT
+  - Maharashtra Shops & Establishment
+fields:
+  name_of_establishment: Name of the Establishment(?:[\S\s]*?)([A-Z .&-/]{6,})
+  #regex for name_of_employer can be little more twicked
+  name_of_employer: Name of the Employer(?:[\S\s]*?)([A-Z .&-]{6,})
+  #name_of_employer: Name of the Employer\s*[:;>-]?\s*([A-Z\.\s]+)

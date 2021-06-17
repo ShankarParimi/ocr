@@ -1,0 +1,6 @@
+issuer: Government of Rajasthan - Department of Planning
+keywords:
+  - Department of Planning
+  - Rajasthan, Jaipur
+fields:
+  name_of_establishment: \(BRN\)(?:[\S\s]*?)([A-Z .&-/]{6,})

@@ -1,0 +1,8 @@
+issuer: Government of Madhya Pradesh -  Labour Department
+keywords:
+  - Labour Department
+  - स्थापना के पंजीयन का प्रमाण पत्र
+  - मध्यप्रदेश दुकान एवं स्थापना अधिनियम, 1958
+fields:
+  name_of_establishment: स्थापना का नाम\s*:([\S ]+[\S]+)
+  name_of_employer: पता\s*मालिक\s*[|]?([\S ]+[\S]+)

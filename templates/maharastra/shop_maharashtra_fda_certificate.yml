@@ -1,0 +1,6 @@
+issuer: Government of Maharashtra - Food and Drug Administration
+keywords:
+  - Food And Drug Administration
+  - Government of Maharashtra
+fields:
+  name_of_employer: (?:अन्न व्यवसायाचा चालकाचे)? नाव व पता(?:[\S\s]*?)([A-Z .]{6,})

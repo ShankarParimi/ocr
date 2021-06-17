@@ -1,0 +1,7 @@
+issuer: Government of Assam - Certificate of Registration
+keywords:
+  - CERTIFICATE OF REGISTRATION
+  - Assam Shop and Establishment Act
+fields:
+  name_of_establishment: Name of Establishment\s*([\S ]+[\S]+)
+  name_of_employer: Name of Employer\s*([\S ]+[\S]+)

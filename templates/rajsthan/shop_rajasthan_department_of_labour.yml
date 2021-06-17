@@ -1,0 +1,7 @@
+issuer: Government of Rajasthan - Department of Labour
+keywords:
+  - Government of Rajasthan
+  - Department of Labour
+fields:
+  name_of_establishment: Name of Establishment\s*[:-]*\s*([\S ]+[\S]+)
+  name_of_employer: Name of Occupier/Employer\s*[:-]*\s*([\S ]+[\S]+)

@@ -1,0 +1,7 @@
+issuer: Government of Maharashtra - Registration Certificate
+keywords:
+  - नोंदणी प्रमाणपत्र
+  - Registration Certificate
+fields:
+  name_of_establishment: आस्थापनेचे नाव(?:[\S\s]*?)([A-Z .&-/]{6,})
+  name_of_employer: Date of commencement(?:[\S\s]*?)([A-Z .]{6,})

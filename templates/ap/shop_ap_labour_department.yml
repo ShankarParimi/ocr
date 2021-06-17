@@ -1,0 +1,7 @@
+issuer: Government of Andhra Pradesh -  Labour Department
+keywords:
+  - GOVERNMENT OF ANDHRA PRADESH
+  - LABOUR DEPARTMENT
+fields:
+  name_of_establishment: Name of the Establishment\s*:?\s*([\S ]+[\S]+)
+  name_of_employer: Employer Name\s*:?\s*([\S ]+[\S]+)

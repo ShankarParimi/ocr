@@ -1,0 +1,13 @@
+{
+  "ocr_id": "H12Q5eMx0c06uX",
+  "status": "success",
+  "result": {
+    "issuer": "Government of Maharashtra - Food and Drug Administration",
+    "fields": {
+      "name_of_establishment": "ABC PVT LTD",
+      "name_of_employer": "Dilip Chauhan",
+    }
+  },
+  "error_code": "",
+  "error_reason": "",
+}

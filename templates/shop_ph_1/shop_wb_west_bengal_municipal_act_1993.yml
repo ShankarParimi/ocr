@@ -1,0 +1,6 @@
+issuer: Government of West Bengal - The West Bengal Municipal Act, 1993
+keywords:
+  - The West Bengal Municipal Act
+fields:
+  name_of_establishment: grant\s*unto\s*([\s \S]+)Prop
+  name_of_employer: Partner of?\s*([\s \S]+)residing
