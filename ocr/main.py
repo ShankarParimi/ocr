@@ -18,7 +18,7 @@ from .extract.loader import read_templates
 from .output import to_csv
 from .output import to_json
 from .output import to_xml
-
+import spacy
 
 logger = logging.getLogger(__name__)
 
@@ -81,25 +81,102 @@ def extract_data(invoicefile, templates=None, input_module=pdftotext):
 
     # print(templates[0])
     extracted_str = input_module.to_text(invoicefile).decode("utf-8")
-    print("extracted_str:", extracted_str)
 
-    logger.debug("START pdftotext result ===========================")
-    logger.debug(extracted_str)
-    logger.debug("END pdftotext result =============================")
+    # print("extracted_str:", extracted_str)
+    def regex_model():
+        logger.debug("START pdftotext result ===========================")
+        logger.debug(extracted_str)
+        logger.debug("END pdftotext result =============================")
 
-    logger.debug("Testing {} template files".format(len(templates)))
-    for t in templates:
-        optimized_str = t.prepare_input(extracted_str)
-        print("optimized_str:", extracted_str)
+        logger.debug("Testing {} template files".format(len(templates)))
+        for t in templates:
+            optimized_str = t.prepare_input(extracted_str)
+            print("optimized_str:", extracted_str)
 
-        if t.matches_input(optimized_str):
-            identified_fields = t.extract(optimized_str)
-            print("identified_fields:", identified_fields)
-            if not is_all_fields_empty(identified_fields):
-                return identified_fields
+            if t.matches_input(optimized_str):
+                identified_fields = t.extract(optimized_str)
+                print("identified_fields:", identified_fields)
+                if not is_all_fields_empty(identified_fields):
+                    print(identified_fields)
+                    return identified_fields
 
-    logger.error("No template for %s", invoicefile)
-    return False
+        logger.error("No template for %s", invoicefile)
+        return False
+
+    def spacy_model():
+        final_dict = {}
+        f = open("output.txt", "w+")
+        f.write(extracted_str)
+        f.close()
+
+        f1 = open("optimized.txt", "w+")
+        with open("output.txt") as f:
+            for line in f:
+                print(line)
+                if not line.isspace():
+                    f1.write(line)
+
+        f1.close()
+        file = open("optimized.txt", "r")
+        text = file.read()
+        file.close()
+        nlp = spacy.load("./model483")
+        list_lines = text.splitlines()
+
+        l_of_lines = []
+        for i, line in enumerate(list_lines):
+            doc = nlp(line)
+            l_of_lines.append([(ent.text, ent.label_) for ent in doc.ents])
+
+        doc = nlp(text)
+        l_of_text = [(ent.text, ent.label_) for ent in doc.ents]
+
+        for i in l_of_text:
+            if i[1] == "UDYAM REGISTRATION NUMBER":
+                if len(i[0]) >= 10:
+                    final_dict[i[1]] = i[0]
+            elif i[1] == "UDYOG AADHAR NUMBER":
+                if len(i[0]) >= 10:
+                    final_dict[i[1]] = i[0]
+            else:
+                final_dict[i[1]] = i[0]
+
+        for i in l_of_lines:
+            if len(i) > 0:
+                for j in range(len(i)):
+                    if i[j][1] == "UDYAM REGISTRATION NUMBER":
+                        if len(i[j][0]) >= 10:
+                            final_dict[i[j][1]] = i[j][0]
+                    elif i[j][1] == "UDYOG AADHAR NUMBER":
+                        if len(i[j][0]) >= 10:
+                            final_dict[i[j][1]] = i[j][0]
+                    elif i[j][1] == "NAME OF ENTERPRISE":
+                        if (len(i[j][0]) > 2):
+                            final_dict[i[j][1]] = i[j][0]
+                    else:
+                        final_dict[i[j][1]] = i[j][0]
+
+        print("line by line", l_of_lines)
+        print("\n ---------------")
+        print("doc", l_of_text)
+        return final_dict
+
+    reg_dict = regex_model()
+    spacy_dict = spacy_model()
+    print("regex_dict", reg_dict)
+    print("-----------------")
+    print("spacy_dict", spacy_dict)
+    final = {}
+    if reg_dict != False:
+        for key, val in reg_dict.items():
+            if val != "[]":
+                final[key] = val
+
+    for key, val in spacy_dict.items():
+        if key not in final.keys():
+            final[key] = val
+
+    return final
 
 
 # check if all other fields apart from issuer are empty
@@ -109,6 +186,7 @@ def is_all_fields_empty(identified_fields):
             if value:
                 return False
     return True
+
 
 def create_parser():
     """Returns argument parser """
@@ -169,7 +247,7 @@ def create_parser():
         dest="filename",
         default="{date} {invoice_number} {desc}.pdf",
         help="Filename format to use when moving or copying processed PDFs."
-        'Default: "{date} {invoice_number} {desc}.pdf"',
+             'Default: "{date} {invoice_number} {desc}.pdf"',
     )
 
     parser.add_argument(
