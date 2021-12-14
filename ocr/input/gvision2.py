@@ -1,6 +1,6 @@
 import os
 import shutil
-import  time
+import time
 from .utils import general_util as util
 from .utils import image_enhancer as img_enh
 from .utils import pdftoimage as p2i
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 __supported_img_extensions = ["png", "jpg", "jpeg", "tiff"]
 __extension = "png"
-__threshold_number = 5
+__threshold_number = 25
 
 
 def to_text(path):
@@ -47,11 +47,11 @@ def to_text(path):
         pdf_to_image = p2i.PdfToImage(path, output_dir, __extension)
         image_files_path = pdf_to_image.to_images()
         print(image_files_path)
-        #time.sleep(30)
+        # time.sleep(30)
         if len(image_files_path) > __threshold_number:
             image_files_path = []
         print(image_files_path)
-        #return "".encode("utf-8")
+        # return "".encode("utf-8")
 
         extracted_str = ""
         for image_path in image_files_path:
@@ -63,6 +63,7 @@ def to_text(path):
                 logger.info("applying gvision on the image")
                 text = get_document_text_by_gvision(image_path)
                 logger.info("completed gvision on the image")
+                logger.info(f"text: {text.encode('utf-8')}")
             except (FileNotFoundError, Exception) as e:
                 logger.error(f"failed to extract from image using gvision - {e}")
                 extracted_str = ""
